@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Password Screen -->
+<form id="loginForm">
+  <h2>Enter the secret password ❤️</h2>
+  <p>The day we got together 😉</p>
+  <input type="password" id="pass" placeholder="Password">
+  <button type="submit">Enter</button>
+  <p id="error"></p>
+</form>
+
+
+
+<div id="content" class="hidden">
+  <!-- النص المتحرك -->
+  <div id="typing-container">
+    <h1 id="typing"></h1>
+  </div>
+
+  <!-- الزرار -->
+  <div id="button-container">
+    <button onclick="showSurprise()">Click me 🎁</button>
+  </div>
+
+  <!-- Surprise -->
+  <div id="surprise" class="hidden">
+    <h2>Will you be my valentine 💌</h2>
+    <div id="images">
+        <img src="yass1.jpeg" width="125px" height="125px" />
+        <img src="yass2.jpeg" width="125px" height="125px"/>
+      <img src="yass3.jpeg" width="125px" height="125px"/>
+
+    </div>
+
+    <div>
+        <h5 id="typing_sip"></h5>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="main.js"></script>
+</body>
+</html>
