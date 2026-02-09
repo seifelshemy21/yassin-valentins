@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <title>Valentine</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -17,36 +25,55 @@
 </form>
 
 
-
-<div id="content" class="hidden">
+<div id="content" class="hidden flex flex-col items-center mt-10 text-center">
+  
   <!-- النص المتحرك -->
-  <div id="typing-container">
-    <h1 id="typing"></h1>
+  <div id="typing-container" class="w-80 min-h-[50px] mb-6">
+    <h1 id="typing" class="text-xl font-semibold text-white"></h1>
   </div>
 
   <!-- الزرار -->
   <div id="button-container">
-    <button onclick="showSurprise()">Click me 🎁</button>
+    <button 
+      id="clickBtn"
+      onclick="showSurprise()"
+      class="px-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+    >
+      Click me 🎁
+    </button>
   </div>
 
-  <!-- Surprise -->
-  <div id="surprise" class="hidden">
-    <h2>Will you be my valentine 💌</h2>
-    <div id="images">
-        <img src="yass1.jpeg" width="125px" height="125px" />
-        <img src="yass2.jpeg" width="125px" height="125px"/>
-      <img src="yass3.jpeg" width="125px" height="125px"/>
-
-    </div>
-
-    <div>
-        <h5 id="typing_sip"></h5>
-    </div>
+  <!-- Surprise Card -->
+ <div id="surprise" class="hidden mt-6 w-80 bg-white rounded-2xl shadow-2xl p-6 flex flex-col items-center">
+  <h2 class="text-2xl font-bold mb-4 text-red-500">Will you be my valentine 💌</h2>
+  
+  <!-- الصور في صف واحد -->
+  <div id="images" class="flex flex-row gap-3 mb-4 justify-center">
+    <img src="yass1.jpeg" class="w-20 h-20 rounded-lg" />
+    <img src="yass2.jpeg" class="w-20 h-20 rounded-lg" />
+    <img src="yass3.jpeg" class="w-20 h-20 rounded-lg" />
   </div>
+
+  <p id="typing_sip" class="text-gray-700 text-sm text-center"></p>
+</div>
+
+
 </div>
 
 
 
+
 <script src="main.js"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>

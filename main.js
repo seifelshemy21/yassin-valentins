@@ -24,17 +24,25 @@ function typeText() {
   }
 }
 
-let text_sip = "Happy Valentine’s Day my love Every day with you feels special but today is just another reminder of how lucky I am to have you in my life You’re not just my girlfriend you’re my comfort my happiness, and the reason I smile without even noticing Thank you for being there for me, for understanding me and for loving me the way you do I hope we stay together keep growing together and keep making beautiful memories side by side I love you more than words can explain, and I’m grateful that I get to call you mine❤️🫂";
+function showSurprise() {
+  // اخفاء الزرار
+  document.getElementById("clickBtn").classList.add("hidden");
+  
+  // اظهار السوربرايز
+  document.getElementById("surprise").classList.remove("hidden");
+
+  // نكتب النص الطويل
+  typeTextSip();
+}
+
+let text_sip = "Happy Valentine’s Day my love. Every day with you feels special but today is just another reminder of how lucky I am to have you in my life. You’re not just my girlfriend, you’re my comfort, my happiness, and the reason I smile. I love you more than words can explain ❤️";
 let x = 0;
 
 function typeTextSip() {
   if (x < text_sip.length) {
     document.getElementById("typing_sip").innerHTML += text_sip.charAt(x);
     x++;
-    setTimeout(typeTextSip, 50);
+    setTimeout(typeTextSip, 30);
   }
 }
 
-function showSurprise() {
-  document.getElementById("surprise").classList.remove("hidden");
-}
