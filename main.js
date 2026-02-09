@@ -25,16 +25,21 @@ function typeText() {
 }
 
 function showSurprise() {
-  // اخفاء الزرار
-  document.getElementById("clickBtn").classList.add("hidden");
+  // اخفاء سؤال Card
+  document.getElementById("question-card").classList.add("hidden");
   
-  // اظهار السوربرايز
+  // اظهار Surprise Card
   document.getElementById("surprise").classList.remove("hidden");
 
-  // نكتب النص الطويل
+  // كتابة النص الطويل تدريجيًا
   typeTextSip();
 }
 
+function noAction() {
+  alert("Oh 😢 maybe next time!");
+}
+
+// النص الطويل
 let text_sip = "Happy Valentine’s Day my love. Every day with you feels special but today is just another reminder of how lucky I am to have you in my life. You’re not just my girlfriend, you’re my comfort, my happiness, and the reason I smile. I love you more than words can explain ❤️";
 let x = 0;
 
@@ -45,4 +50,5 @@ function typeTextSip() {
     setTimeout(typeTextSip, 30);
   }
 }
+
 
